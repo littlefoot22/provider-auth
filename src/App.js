@@ -3,6 +3,7 @@ import './App.css';
 import './index.css';
 import {useState} from 'react';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
+import LoginForm from './components/LoginForm/LoginForm';
 
 import Header from './components/Header/Header';
 import {
@@ -36,8 +37,11 @@ class NameForm extends React.Component {
       <Header/>
         <div className="container d-flex align-items-center flex-column">
           <Switch>
-            <Route path="/" exact={true}>
+          <Route path="/register">
               <RegistrationForm />
+            </Route>
+            <Route path="/login">
+              <LoginForm />
             </Route>
           </Switch>
        </div>
